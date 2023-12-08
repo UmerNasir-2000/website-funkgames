@@ -1,8 +1,14 @@
 {
   "name": "website-funkgames",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://website-funkgames.vercel.app/",
+  "author": {
+    "email": "umer.nas@outlook.com",
+    "name": "M. Umer Nasir",
+    "url": "https://github.com/UmerNasir-2000"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
