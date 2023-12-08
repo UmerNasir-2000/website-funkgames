@@ -1,3 +1,3 @@
-const App = () => <h1>FUNK GAMES</h1>
-
-export default App
+export default function App(): JSX.Element {
+  return <h1>FUNK GAMES</h1>;
+}
