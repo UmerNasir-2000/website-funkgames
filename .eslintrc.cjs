@@ -36,6 +36,6 @@ module.exports = {
     '@typescript-eslint/no-non-null-assertion': 'off',
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
-    'linebreak-style': ['error', 'windows'],
+    'linebreak-style': 'off',
   },
 };
