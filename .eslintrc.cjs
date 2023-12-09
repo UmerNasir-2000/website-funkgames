@@ -37,5 +37,7 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
     'linebreak-style': 'off',
+    'no-console': 'off',
+    'react/jsx-props-no-spreading': 'off',
   },
 };
