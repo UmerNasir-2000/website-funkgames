@@ -1,4 +1,4 @@
 import Navbar from './navbar';
+import ThemeSwitcher from './themeSwitcher';
 
-// eslint-disable-next-line import/prefer-default-export
-export { Navbar };
+export { Navbar, ThemeSwitcher };
