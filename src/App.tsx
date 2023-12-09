@@ -4,7 +4,7 @@ import logo from './assets/logo.svg';
 export default function App(): JSX.Element {
   return (
     <>
-      <Image src={logo}/>
+      <Image src={logo} />
       <Heading>FUNK GAMES</Heading>
       <Text>Testing...</Text>
     </>
