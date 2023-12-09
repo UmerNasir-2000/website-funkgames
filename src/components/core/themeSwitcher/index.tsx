@@ -10,7 +10,7 @@ export default function ThemeSwitcher(): JSX.Element {
 
   return (
     <HStack>
-      <Switch size="lg" colorScheme="green" onChange={toggleColorMode} checked={isDarkMode} />
+      <Switch size="md" colorScheme="green" onChange={toggleColorMode} isChecked={isDarkMode} />
       <Text>Mode</Text>
     </HStack>
   );
