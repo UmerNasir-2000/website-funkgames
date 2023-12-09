@@ -1,4 +1,6 @@
-import { Switch, useColorMode } from '@chakra-ui/react';
+import {
+  HStack, Switch, Text, useColorMode,
+} from '@chakra-ui/react';
 import { useMemo } from 'react';
 
 export default function ThemeSwitcher(): JSX.Element {
@@ -6,5 +8,10 @@ export default function ThemeSwitcher(): JSX.Element {
 
   const isDarkMode = useMemo(() => colorMode === 'dark', [colorMode]);
 
-  return <Switch size="md" colorScheme="green" onChange={toggleColorMode} checked={isDarkMode} />;
+  return (
+    <HStack>
+      <Switch size="lg" colorScheme="green" onChange={toggleColorMode} checked={isDarkMode} />
+      <Text>Mode</Text>
+    </HStack>
+  );
 }
