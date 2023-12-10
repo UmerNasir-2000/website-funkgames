@@ -16,7 +16,7 @@ export interface GameModel {
   parent_platforms: Array<{ platform: Platform }>
 }
 
-interface BaseApiModel<T> {
+export interface BaseApiModel<T> {
   count: number
   results: T[]
 }

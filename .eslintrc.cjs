@@ -39,5 +39,6 @@ module.exports = {
     'linebreak-style': 'off',
     'no-console': 'off',
     'react/jsx-props-no-spreading': 'off',
+    '@typescript-eslint/no-invalid-void-type': 'off',
   },
 };
