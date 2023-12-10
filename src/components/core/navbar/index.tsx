@@ -1,6 +1,5 @@
 import {
   Box,
-  Container,
   HStack,
   Heading,
   Input,
@@ -10,11 +9,12 @@ import {
 } from '@chakra-ui/react';
 import { AiOutlineSearch } from 'react-icons/ai';
 import ThemeSwitcher from '../themeSwitcher';
+import Wrapper from '../wrapper';
 
 export default function Navbar(): JSX.Element {
   return (
     <Box boxShadow="2xl">
-      <Container maxW="7xl">
+      <Wrapper>
         <HStack padding={3} justifyContent="space-between" alignItems="center">
           <Heading cursor="pointer" fontFamily="cursive">
             Funk Games
@@ -29,7 +29,7 @@ export default function Navbar(): JSX.Element {
           </Show>
           <ThemeSwitcher />
         </HStack>
-      </Container>
+      </Wrapper>
     </Box>
   );
 }

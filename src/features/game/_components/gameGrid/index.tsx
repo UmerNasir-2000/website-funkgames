@@ -1,4 +1,5 @@
-import { Container, SimpleGrid } from '@chakra-ui/react';
+import { SimpleGrid } from '@chakra-ui/react';
+import Wrapper from '../../../../components/core/wrapper';
 import useGame from '../../hooks/useGame';
 import GameCard from '../gameCard';
 import GameCardSkeleton from '../gameCard/skeleton';
@@ -7,7 +8,7 @@ export default function GameGrid(): JSX.Element {
   const { games, loading } = useGame();
 
   return (
-    <Container maxW="7xl">
+    <Wrapper>
       <SimpleGrid
         columns={{
           sm: 1, md: 2, lg: 3, xl: 4,
@@ -19,6 +20,6 @@ export default function GameGrid(): JSX.Element {
           .map((skeleton) => <GameCardSkeleton key={skeleton} />)}
         {games.map((game) => <GameCard key={game.id} {...game} />)}
       </SimpleGrid>
-    </Container>
+    </Wrapper>
   );
 }
