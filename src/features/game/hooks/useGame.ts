@@ -14,24 +14,27 @@ interface BaseApiModel<T> {
   results: T[]
 }
 
-const useGame = (): { games: GameModel[], error: string } => {
+const useGame = (): { games: GameModel[], error: string, loading: boolean } => {
   const [games, setGames] = useState<GameModel[]>([]);
   const [error, setError] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
     const controller = new AbortController();
 
+    setLoading(true);
     axios.get<BaseApiModel<GameModel>>(
       `https://api.rawg.io/api/games?key=${API_KEY}&page_size=40`,
       { signal: controller.signal },
     )
       .then((response) => { setGames(response.data.results); })
-      .catch((err) => { setError(err); });
+      .catch((err) => { setError(err); })
+      .finally(() => { setLoading(false); });
 
     return () => { controller.abort(); };
   }, []);
 
-  return { games, error };
+  return { games, error, loading };
 };
 
 export default useGame;
