@@ -3,10 +3,17 @@ import { useEffect, useState } from 'react';
 
 const API_KEY = import.meta.env.VITE_RAWG_API_URL;
 
+export interface Platform {
+  id: number
+  name: string
+  slug: string
+}
+
 export interface GameModel {
   id: number
   name: string
   background_image: string
+  parent_platforms: Array<{ platform: Platform }>
 }
 
 interface BaseApiModel<T> {

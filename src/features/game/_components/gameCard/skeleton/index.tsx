@@ -7,7 +7,7 @@ import {
 export default function GameCardSkeleton(): JSX.Element {
   return (
     <Card borderRadius="lg" overflowX="hidden" cursor="pointer">
-      <Skeleton h="200px" />
+      <Skeleton h="250px" />
       <CardBody>
         <SkeletonText />
       </CardBody>
